@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -32,25 +31,25 @@ const Index = () => {
 
   const products = [
     {
-      name: "Ocean's Delight",
-      description: "A seafood medley crafted with wild-caught salmon, tuna, and shrimp. Rich in omega-3 fatty acids for a healthy coat and brain development.",
+      name: "海洋之味",
+      description: "以野生三文魚、吞拿魚和蝦製成的海鮮大餐。富含 Omega-3 脂肪酸，有助於毛髮和腦部發展。",
       price: "$24.99",
       image: "https://images.unsplash.com/photo-1604186838347-9faaf0b83be8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      tags: ["Seafood", "Grain-Free"]
+      tags: ["海鮮", "無穀物"]
     },
     {
-      name: "Countryside Chicken",
-      description: "Premium free-range chicken blended with organic vegetables and essential nutrients. Perfect for cats with sensitive digestion.",
+      name: "鄉村雞肉",
+      description: "優質放養雞肉配以有機蔬菜和必需營養。特別適合腸胃敏感的貓咪。",
       price: "$22.99",
       image: "https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      tags: ["Chicken", "Organic"]
+      tags: ["雞肉", "有機"]
     },
     {
-      name: "Gourmet Game",
-      description: "An exquisite blend of venison and rabbit with cranberries and spinach. High protein content for active cats.",
+      name: "美味野味",
+      description: "精選鹿肉和兔肉配以蔓越莓和菠菜。高蛋白質含量，適合活躍的貓咪。",
       price: "$27.99",
       image: "https://images.unsplash.com/photo-1585584114963-503344a119b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      tags: ["Game Meat", "High-Protein"]
+      tags: ["野味", "高蛋白"]
     }
   ];
 
@@ -58,104 +57,72 @@ const Index = () => {
     <div className="min-h-screen bg-cream-light">
       <Navbar />
       <Hero />
-      
+
       <section id="products" className="py-20">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll opacity-0">
-            <span className="badge badge-primary mb-4">Our Products</span>
-            <h2 className="heading-lg mb-6">Gourmet Selections Your Cat Will Adore</h2>
+            <span className="badge badge-primary mb-4">我們的產品</span>
+            <h2 className="heading-lg mb-6">您的貓咪會喜愛的美味之選</h2>
             <p className="text-foreground/80">
-              Each recipe is thoughtfully crafted to provide balanced nutrition while delighting your cat's discerning palate.
+              每一款配方都經過精心調配，在提供均衡營養的同時，滿足您貓咪挑剔的味蕾。
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <ProductCard 
-                key={index} 
-                {...product} 
+              <ProductCard
+                key={index}
+                {...product}
                 index={index}
               />
             ))}
           </div>
         </div>
       </section>
-      
+
       <Benefits />
-      
+
       <section id="about" className="py-20 overflow-hidden">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll opacity-0">
-              <span className="badge badge-primary mb-4">Our Story</span>
-              <h2 className="heading-lg mb-6">Passionate About Purr-fection</h2>
+              <span className="badge badge-primary mb-4">我們的故事</span>
+              <h2 className="heading-lg mb-6">對完美的追求</h2>
               <p className="text-foreground/80 mb-4">
-                Little Tails Planet began as a labor of love by cat nutritionists who believed our feline friends deserve food that's as thoughtfully prepared as our own.
+                小尾巴星球 Little Tails Planet ™ 源於一群貓咪營養師的愛心之作，他們相信我們的貓咪夥伴應該享有與人類同等用心準備的食物。
               </p>
               <p className="text-foreground/80 mb-4">
-                We meticulously source ingredients that are not only delicious but provide the perfect balance of nutrients that cats need to thrive at every stage of life.
+                我們精心挑選的食材不僅美味，更提供貓咪在各個生命階段所需的完美營養平衡。
               </p>
               <p className="text-foreground/80 mb-6">
-                Our commitment to quality means no fillers, artificial preservatives, or questionable ingredients—just pure, wholesome nutrition in every bite.
+                我們對品質的承諾意味著絕不使用填充物、人工防腐劑或可疑成分—每一口都是純淨、完整的營養。
               </p>
               <a href="#products" className="btn-primary">
-                Explore Our Products
+                瀏覽產品
               </a>
             </div>
-            
+
             <div className="relative animate-on-scroll opacity-0">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                  alt="Orange and white cat enjoying Little Tails Planet food" 
+                <img
+                  src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                  alt="橙白相間的貓咪享用小尾巴星球 Little Tails Planet ™ 貓糧"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs">
                 <p className="font-display text-lg italic text-foreground/80">
-                  "We believe every cat deserves nutrition crafted with the same care and quality as human food."
+                  "我們相信每隻貓咪都應該享有與人類食品同等用心和品質的營養。"
                 </p>
                 <div className="mt-3">
-                  <span className="font-semibold">— Dr. Emily Chen, Founder</span>
+                  <span className="font-semibold">— 陳博士，創辦人</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section id="contact" className="py-20 bg-brand-light">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto animate-on-scroll opacity-0">
-            <span className="badge badge-primary mb-4">Stay Connected</span>
-            <h2 className="heading-lg mb-6">Join the Little Tails Family</h2>
-            <p className="text-foreground/80 mb-8">
-              Subscribe to receive exclusive offers, nutrition tips, and be the first to know about new products.
-            </p>
-            
-            <form className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="flex-1 px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
-                />
-                <button 
-                  type="submit" 
-                  className="btn-primary whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-xs text-foreground/60 mt-3">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-      
+
       <Footer />
     </div>
   );

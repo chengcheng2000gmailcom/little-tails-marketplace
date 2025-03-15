@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -10,9 +9,9 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -23,32 +22,32 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <a href="/" className="relative z-10 flex items-center">
-            <span className="font-display text-2xl font-bold text-foreground">Little Tails Planet</span>
+            <span className="font-display text-2xl font-bold text-foreground">小尾巴星球 Little Tails Planet ™</span>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#products" className="text-foreground/80 hover:text-foreground transition-colors duration-200">
-              Products
+              產品
             </a>
             <a href="#benefits" className="text-foreground/80 hover:text-foreground transition-colors duration-200">
-              Benefits
+              優點
             </a>
             <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors duration-200">
-              About
+              關於我們
             </a>
             <a href="#contact" className="btn-primary">
-              Shop Now
+              立即購買
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             type="button"
             className="md:hidden z-10 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
-            aria-label="Toggle menu"
+            aria-label="切換選單"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6 text-foreground" />
@@ -61,33 +60,33 @@ const Navbar = () => {
           {isMenuOpen && (
             <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-0 flex flex-col pt-24 px-4">
               <nav className="flex flex-col space-y-6">
-                <a 
-                  href="#products" 
+                <a
+                  href="#products"
                   className="text-xl font-medium text-foreground py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Products
+                  產品
                 </a>
-                <a 
-                  href="#benefits" 
+                <a
+                  href="#benefits"
                   className="text-xl font-medium text-foreground py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Benefits
+                  優點
                 </a>
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   className="text-xl font-medium text-foreground py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  關於我們
                 </a>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="btn-primary mt-4 w-full justify-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Shop Now
+                  立即購買
                 </a>
               </nav>
             </div>
