@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -115,7 +116,7 @@ const Index = () => {
                   "我們相信每隻貓咪都應該享有與人類食品同等用心和品質的營養。"
                 </p>
                 <div className="mt-3">
-                  <span className="font-semibold">— 陳博士，創辦人</span>
+                  <span className="font-semibold">— James，創辦人</span>
                 </div>
               </div>
             </div>
