@@ -1,3 +1,4 @@
+
 import { ArrowUp, Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -41,8 +42,8 @@ const Footer = () => {
             © {new Date().getFullYear()} 小尾巴星球 Little Tails Planet ™
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            {/* <a href="#" className="text-cream-light/60 hover:text-cream-light text-sm transition-colors">私隱政策</a>
-            <a href="#" className="text-cream-light/60 hover:text-cream-light text-sm transition-colors">服務條款</a> */}
+            <a href="/privacy" className="text-cream-light/60 hover:text-cream-light text-sm transition-colors">私隱政策</a>
+            <a href="/terms" className="text-cream-light/60 hover:text-cream-light text-sm transition-colors">服務條款</a>
           </div>
           <button
             onClick={scrollToTop}
